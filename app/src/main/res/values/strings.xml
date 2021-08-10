@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">PTT Pro Call/Message Demo App</string>
+    <string name="message">Message</string>
+    <string name="call">Call</string>
+    <string name="end_call">End</string>
+    <string name="user">user</string>
+    <string name="group">group</string>
+    <string name="hint_username">Enter %1$s name</string>
+    <string name="hint_message">Enter message</string>
+    <string name="username_cannot_be_empty">Username cannot be empty</string>
+    <string name="message_cannot_be_empty">Message cannot be empty</string>
+    <string name="adhoc_info_message">Single or multiple username can be added.\nAdd commas for multiple username.\nExample: tom,peter,robert</string>
+    <string name="group_info_message">Only one groupname should be entered.</string>
+    <string name="menu_info">Info</string>
+    <string name="info_title">This is a demo application which is using the PTT Pro call and message intent for
+        initiating PTT Pro call or messaging.\n\nThe intent information is shared below:\n\n
+
+        <!--• = \u2022,   ● = \u25CF,   ○ = \u25CB,   ▪ = \u25AA,   ■ = \u25A0,   □ = \u25A1,   ► = \u25BA-->
+        \u25A0 PTT Pro Call To Group/User \n
+        \u0020\u0020\u0020\u0020\u25AA Action Name: com.symbol.wfc.pttpro.ACTION_PTT_PRO_CALL \n
+        \u0020\u0020\u0020\u0020\u25AA Extra 0 Type: Integer \n
+        \u0020\u0020\u0020\u0020\u25AA Extra 0 Name: recipientType \n
+        \u0020\u0020\u0020\u0020\u25AA Extra 0 Value: 1/0 \n
+        \u0020\u0020\u0020\u0020\u25AA Extra 1 Type: String \n
+        \u0020\u0020\u0020\u0020\u25AA Extra 1 Name: recipientName \n
+        \u0020\u0020\u0020\u0020\u25AA Extra 1 Value: username or groupname \n\n
+
+        ADB Example: \n
+        \u0020\u0020\u0020\u0020\u2022 adb shell am broadcast -a com.symbol.wfc.pttpro.ACTION_PTT_PRO_CALL --ei recipientType 1 --es recipientName \'meru_admin\' \n
+        \u0020\u0020\u0020\u0020\u2022 adb shell am broadcast -a com.symbol.wfc.pttpro.ACTION_PTT_PRO_CALL --ei recipientType 0 --es recipientName \'tom\' \n\n
+
+        \u25A0 PTT Pro Message To Group/User \n
+        \u0020\u0020\u0020\u0020\u25AA Action Name: com.symbol.wfc.pttpro.ACTION_PTT_PRO_MESSAGE \n
+        \u0020\u0020\u0020\u0020\u25AA Extra 0 Type: Integer \n
+        \u0020\u0020\u0020\u0020\u25AA Extra 0 Name: recipientType \n
+        \u0020\u0020\u0020\u0020\u25AA Extra 0 Value: 1/0 \n
+        \u0020\u0020\u0020\u0020\u25AA Extra 1 Type: String \n
+        \u0020\u0020\u0020\u0020\u25AA Extra 1 Name: recipientName \n
+        \u0020\u0020\u0020\u0020\u25AA Extra 1 Value: username or groupname \n
+        \u0020\u0020\u0020\u0020\u25AA Extra 2 Type: String \n
+        \u0020\u0020\u0020\u0020\u25AA Extra 2 Name: message \n
+        \u0020\u0020\u0020\u0020\u25AA Extra 2 Value: Any message in string format \n\n
+
+        ADB Example: \n
+        \u0020\u0020\u0020\u0020\u2022 adb shell am broadcast -a com.symbol.wfc.pttpro.ACTION_PTT_PRO_MESSAGE --ei recipientType 1 --es recipientName \'meru_admin\' --es message \'Hi! This is a test message.\' \n
+        \u0020\u0020\u0020\u0020\u2022 adb shell am broadcast -a com.symbol.wfc.pttpro.ACTION_PTT_PRO_MESSAGE --ei recipientType 0 --es recipientName \'tom\' --es message \'Hi! This is a test message.\' \n
+    </string>
+    <string name="info_ok">Ok </string>
+    <string name="call_ended_successfully">Call ended successfully!!</string>
+</resources>
